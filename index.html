@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feet ↔ Meters Conversion</title>
+</head>
+<body>
+<h1>Feet to Meters & Meters to Feet Table</h1>
+
+<script>
+  function footToMeter(foot) {
+    return 0.305 * foot;
+  }
+
+  function meterToFoot(meter) {
+    return 3.279 * meter;
+  }
+
+  // Dữ liệu kiểm tra
+  let footValues = [1.0, 2.0, 3.0, 4.0, 5.0];
+  let meterValues = [1.0, 2.0, 3.0, 4.0, 5.0];
+
+  // Bảng chuyển đổi từ feet sang meters
+  document.write("<h2>Feet to Meters</h2>");
+  document.write("<table border='1'>");
+  document.write("<tr><th>Feet</th><th>Meters</th></tr>");
+  for (let i = 0; i < footValues.length; i++) {
+    let foot = footValues[i];
+    let meter = footToMeter(foot);
+    document.write(`<tr><td>${foot}</td><td>${meter.toFixed(3)}</td></tr>`);
+  }
+  document.write("</table>");
+
+  // Bảng chuyển đổi từ meters sang feet
+  document.write("<h2>Meters to Feet</h2>");
+  document.write("<table border='1'>");
+  document.write("<tr><th>Meters</th><th>Feet</th></tr>");
+  for (let i = 0; i < meterValues.length; i++) {
+    let meter = meterValues[i];
+    let foot = meterToFoot(meter);
+    document.write(`<tr><td>${meter}</td><td>${foot.toFixed(3)}</td></tr>`);
+  }
+  document.write("</table>");
+</script>
+</body>
+</html>
